@@ -1,0 +1,520 @@
+/* 
+  CLIENT: BabySafe Rx
+  AGENCY: UseAgility
+  DESIGNER: Trampas Whiteman
+  DATE: 6/20/2015  
+*/
+
+/* 
+  COLOR GUIDE
+  BLUE - #66c7ce
+  LIGHT BLUE - #d9eef0
+  TEAL - #319ca4
+*/
+
+/* GENERAL */
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+body h1 {
+  font-size: 1.714285em;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0.25em;
+  margin-top: 0.5em;
+}
+
+body h2 {
+  font-size: 1.285714em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body h3{
+  font-size: 1.142857em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+body a{
+  color: #333;
+}
+
+body a:hover{
+  color: #319ca4;
+}
+
+body ul, 
+body ol, 
+body dl {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.clear{
+  clear: both;
+}
+
+.img-responsive{
+  width: 166%;
+  height: auto;
+}
+
+.breadcrumbs {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+select {
+  border-radius: 5px;
+  width: auto;
+}
+
+/* HEADER */
+header{
+  border-bottom:4px solid #66c7ce;
+  padding: 15px;
+}
+
+.logo {
+  display: block;
+  height: 41px;
+  padding-right: 15px;
+  max-width: 181px;
+}
+
+.logo img{
+  max-width: 181px;
+}
+
+.open-fda-container {
+  position: relative;
+  top: 6px;
+}
+
+.open-fda-container p {
+  margin-bottom: 0;
+}
+
+.open-fda img{
+  max-width: 99px;
+}
+
+.powered-by {
+  position: relative;
+  top: 1px;
+}
+
+/* FOOTER */
+footer{
+  border-top:4px solid #66c7ce;
+  padding: 15px;
+}
+
+.copyright {
+  font-size: 0.8em;
+}
+
+/* HOME PAGE */
+.pregnant-woman-img {
+  max-width: 379px;
+}
+
+.prescription-drugs-container,
+.new-data-container{
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.prescription-drugs{
+  background: url('../img/blue-checks-pattern.jpg') repeat;
+  padding:15px 15px 30px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.prescription-drugs h3 {
+  font-weight: normal;
+}
+
+.new-data{
+  background: url('../img/pink-checks-pattern.jpg') repeat;
+  padding:15px 15px 0 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.prescription-drugs > ul,
+.new-data > ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.prescription-drugs li,
+.new-data li{
+  border-bottom: 1px dashed;
+  padding: 5px;
+  width: 100%;
+}
+
+.prescription-drugs li {
+  display: inline;
+  float: left;
+  margin-right: 2%;
+  width: 48%;
+}
+
+  .search-bar.row.collapse {
+    max-width: 100%;
+  }
+
+input.search-bar-input {
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+}
+
+span.search-icon.postfix {
+  background: #66c7ce;
+  color: #fff;
+  font-size: 1.6em;
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+}
+
+span.search-icon.postfix:hover {
+  background: #319ca4;
+}
+
+/* DRUG DETAILS PAGE */
+.risk-level{
+  background: #daeff1;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+}
+
+.risk-level-number.columns{
+  padding:0;
+}
+
+.risk-level-number img{
+  max-width: 62px;
+}
+
+.drug-info-box{
+  background: #f7fcfc;
+  padding: 15px;
+  margin: 15px 0;
+  overflow: hidden;
+  display: block;
+}
+
+.alternatives.drug-info-box > ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.alternatives.drug-info-box li {
+  margin-bottom: 5px;
+}
+
+.alternatives.drug-info-box span {
+  margin-right: 15px;
+}
+
+.alternatives.drug-info-box {
+  margin-bottom: 15px;
+}
+
+.details-right-lcolumn.large-6.medium-12.small-12.columns {
+  margin: 0;
+  padding: 0;
+}
+
+.drug-info-box #rmjs-1 + [data-readmore-toggle], .drug-info-box #rmjs-1[data-readmore] {
+  display: block;
+  float: right;
+  width: auto;
+}
+
+.details-left p, .details-right p {
+  font-size: .8em;
+}
+
+/* DRUG SEARCH PAGE */
+
+.risk-disclaimer {
+  float: right;
+}
+
+.risk-disclaimer p{
+  font-size: .8em;
+  margin: 0;
+}
+
+
+/* TABLE */
+  table {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 5px;
+  }
+
+  table thead,
+  table tfoot {
+    background: #d9eff1;
+  }
+
+  table tr {
+    border: 1px solid #f7fcfc;
+    padding: 5px;
+  }
+
+  table th, table td {
+    padding: 10px;
+    text-align: center;
+  }
+
+  table th {
+    font-size: .8em;
+    letter-spacing: 1px;
+    min-width: 150px;
+  }
+
+  table tfoot th{
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  table tr.even, table tr.alt, table tr:nth-of-type(2n) {
+    background: #f7fcfc;
+  }
+
+  table tfoot tr th, table tfoot tr td {
+    text-align: right;
+    text-transform: none;
+  }
+
+  table tfoot select{
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  .results-section{
+    margin-bottom: 15px;
+  }
+
+  .results-section span {
+    position: relative;
+    top: 1px;
+  }
+
+  .table-pagination{
+    position: relative;
+    top: 1px;
+  }
+
+/* MEDIA QUERIES */
+
+/* Small screens */
+@media only screen and (max-width: 640px) { 
+  p {
+    font-size: .8rem;
+  }
+
+  .prescription-drugs li {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .logo-container,
+  .open-fda-container{
+    width: 100%;
+  }
+
+  .logo{
+    margin: 0 auto;
+  }
+
+  .logo img{
+    max-width: 181px;
+    margin: 0 auto;
+  }
+
+  .open-fda-container.left.small-12 > p {
+    text-align: center;
+  }
+
+  .open-fda-container.left > p {
+    text-align: center;
+  }
+
+  .details-right-rcolumn.large-6.medium-12.small-12.columns {
+    padding: 0;
+  }
+
+  .drug-info-box:last-child{
+    margin-bottom: 0;
+  }
+
+  .alternatives.drug-info-box:last-child {
+    margin-bottom: 15px;
+  }
+
+  .img-responsive{
+    width: 130%;
+  }
+
+  .prescription-drugs {
+    margin-top: 15px;
+  }
+
+  .risk-disclaimer {
+    float: left;
+  }
+
+  .results-section {
+    float: left;
+  }
+
+  table, thead, tbody, th, td, tr { 
+      display: block; 
+  }
+
+  table {
+      border: 0;
+  }
+
+  table thead, table tfoot {
+    display: none;
+  }
+
+  table tr {
+    margin-bottom: 10px;
+    display: block;
+    overflow: hidden;
+  }
+
+  table td {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    width: 100%;
+    float: right;
+    word-wrap: break-word;
+    background-color: #f7fcfc;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .td-drug-name{
+    font-size: 1.285714em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  .td-generic-name{
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #666666;
+  }
+} 
+
+/* Medium screens */
+@media only screen and (min-width: 641px) and (max-width: 1024px) { 
+  p {
+    font-size: .8rem;
+  } 
+
+  .img-responsive {
+    width: 110%;
+  }
+
+  .prescription-drugs{
+    padding:15px;
+  }
+
+  .prescription-drugs li, .new-data li {
+    display: inline;
+    float: left;
+    margin-right: 2%;
+    width: 48%;
+  }
+
+  .pregnant-woman {
+    padding-bottom: 15px;
+  }
+
+  .details-right-lcolumn.columns {
+    padding: 0;
+  }
+
+  .details-right-rcolumn.large-6.medium-12.small-12.columns {
+    padding: 0;
+  }
+
+  .alternatives.drug-info-box{
+    margin-top: 0;
+  }
+
+  .details-left.large-4.medium-6.small-12.columns {
+    padding-right: 0;
+  }
+
+} 
+
+/* Large screens */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) { 
+  .prescription-drugs li {
+    display: inline;
+    float: left;
+    margin-right: 2%;
+    width: 48%;
+  }
+
+  .details-left.large-4.medium-6.small-12.columns {
+    padding-right: 0;
+  }  
+
+}
+
+/* XLarge screens */
+@media only screen and (min-width: 1441px) { 
+  .prescription-drugs li {
+    display: inline;
+    float: left;
+    margin-right: 2%;
+    width: 48%;
+  }
+
+  .prescription-drugs li {
+    display: inline;
+    float: left;
+    margin-right: 2%;
+    width: 48%;
+  }  
+
+  .details-left.large-4.medium-6.small-12.columns {
+    padding-right: 0;
+  }  
+  
+  .search-bar.row.collapse {
+    max-width: 50%;
+  }
+} 

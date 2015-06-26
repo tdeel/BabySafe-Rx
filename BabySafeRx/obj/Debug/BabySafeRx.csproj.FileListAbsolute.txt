@@ -1,0 +1,10 @@
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\bin\BabySafeRx.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\bin\BabySafeRx.pdb
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\obj\Debug\BabySafeRx.csprojResolveAssemblyReference.cache
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\obj\Debug\BabySafeRx.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\obj\Debug\BabySafeRx.pdb
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\bin\Newtonsoft.Json.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\bin\Newtonsoft.Json.pdb
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\bin\Newtonsoft.Json.xml
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\bin\log4net.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRx\bin\log4net.xml
