@@ -21,18 +21,23 @@
     <script src="js/jquery-dataTables.js"></script>
     <script>
         $(document).ready(function () {
-            $('#searchTable').DataTable();
+            $('#searchTable').DataTable({
+                "searching": false,
+                "lengthMenu": [[5, 10, -1], [5, 10, "All"]]
+            });
         });
 
-        function runSearch() {
+        function retrieveResults() {
             searchText = new String("");
-            searchText = $("#txtSearch").val();
-            document.location.href = "drug-search.aspx?search=" + searchText;
+            searchText = $("#inputSearch").val();
+            searchText = searchText.replace(" ", "+");
+            __doPostBack('ButtonA', searchText);
+
         }
     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="searchButton">
         <header>
             <div class="row">
                 <div class="large-12 columns">
@@ -60,16 +65,20 @@
                 <div class="heading large-12 medium-12 small-12 columns">
                     <h1>Prescription Drugs
                     </h1>
-                    <div class="search-bar row collapse">
-                        <div class="search-bar-input-div large-11 medium-11 small-10 columns">
-                            <asp:TextBox ID="txtSearch" ClientIDMode="Static" runat="server" CssClass="search-bar-input" placeholder="Can I take this drug while pregnant?"></asp:TextBox>
+                        <div class="search-bar row collapse">
+                            <div class="search-bar-input-div large-11 medium-11 small-10 columns">
+                                <asp:TextBox runat="server" ID="inputSearch1" placeholder="Can I take this drug while pregnant?" CssClass="search-bar-input"></asp:TextBox>
+                            </div>
+                            <div class="search-icon-div large-1 medium-1 small-2 end columns">
+                                <span class="search-icon postfix">
+                                    <asp:ImageButton runat="server" ID="searchButton" CssClass="fi-magnifying-glass" ClientIDMode="Static" 
+                                        ImageUrl="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-magnifying-glass.svg" 
+                                        Width="22" Height="22"
+                                        OnClick="searchButton_Click" />
+                                </span>
+                            </div>
                         </div>
-                        <div class="search-icon-div large-1 medium-1 small-2 end columns">
-                            <span class="search-icon postfix" onclick="runSearch();">
-                                <i class="fi-magnifying-glass"></i>
-                            </span>
-                        </div>
-                    </div>
+                        <asp:Label runat="server" ID="lblError" ForeColor="Red" Visible="false" Text=""></asp:Label>
                     <div class="risk-disclaimer">
                         <p>* no human studies </p>
                     </div>
@@ -81,12 +90,12 @@
                             <asp:TableHeaderCell>Generic Name</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Usage</asp:TableHeaderCell>
                         </asp:TableHeaderRow>
-                        <asp:TableRow TableSection="TableBody">
+<%--                        <asp:TableRow TableSection="TableBody">
                             <asp:TableCell></asp:TableCell>
                             <asp:TableCell></asp:TableCell>
                             <asp:TableCell></asp:TableCell>
                             <asp:TableCell></asp:TableCell>
-                        </asp:TableRow>
+                        </asp:TableRow>--%>
                     </asp:Table>
                 </div>
             </div>

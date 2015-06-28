@@ -15,23 +15,15 @@
     <script src="js/vendor/jquery.js"></script>
     <script>
 
-        function retrieveResults() {
-            searchText = new String("");
-            searchText = $("#inputSearch").val();            
-            searchText = searchText.replace(" ", "+");
-            __doPostBack('ButtonA', searchText);
-
-        }
-
         function searchLink(searchText) {
             $("#inputSearch").val(searchText);
-            retrieveResults();
+            $("#searchButton").click();
         }
 
     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="searchButton">
 <asp:LinkButton ID="LinkButton1" runat="server" />
                 <header>
             <div class="row">
@@ -69,13 +61,18 @@
 
                         <div class="search-bar row collapse">
                             <div class="search-bar-input-div large-11 medium-11 small-10 columns">
-                                <input class="search-bar-input" id="inputSearch" type="text" placeholder="Can I take this drug while pregnant?" />
+                                <asp:TextBox runat="server" id="inputSearch" placeholder="Can I take this drug while pregnant?" CssClass="search-bar-input"></asp:TextBox>
                             </div>
                             <div class="search-icon-div large-1 medium-1 small-2 end columns">
-                                <span class="search-icon postfix"><i class="fi-magnifying-glass" onclick="retrieveResults()"></i></span>
+                                <span class="search-icon postfix">
+                                    <asp:ImageButton runat="server" ID="searchButton" CssClass="fi-magnifying-glass" ClientIDMode="Static" 
+                                        ImageUrl="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-magnifying-glass.svg" 
+                                        Width="22" Height="22"
+                                        OnClick="searchButton_Click" />
+                                </span>
                             </div>
                         </div>
-
+                        <asp:Label runat="server" ID="lblError" ForeColor="Red" Visible="false" Text=""></asp:Label>
                         <h3>Common Prescription Drugs</h3>
                         <ul>
                             <li><a href="javascript:void(0)" onclick="searchLink('Topamax')">Topamax (topiramate)</a></li>

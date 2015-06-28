@@ -98,22 +98,22 @@
 
                     </div>
 
-                    <div class="details-right-rcolumn large-6 medium-12 small-12 columns">
+<%--                    <div class="details-right-rcolumn large-6 medium-12 small-12 columns">
                         <div class="alternatives drug-info-box">
                             <h3>Alternatives</h3>
                             <p>* no human studies</p>
                             <ul>
                                 <li><span>
-                                    <img class="risk-3" src="img/risk-3.png"></span><a href="#">[brand name]</a></li>
+                                    <img class="risk-3" src="img/risk-3.png" /></span><a href="#">[brand name]</a></li>
                                 <li><span>
-                                    <img class="risk-2" src="img/risk-2.png"></span><a href="#">[brand name]</a></li>
+                                    <img class="risk-2" src="img/risk-2.png" /></span><a href="#">[brand name]</a></li>
                                 <li><span>
                                     <img class="risk-1" src="img/risk-1.png"></span><a href="#">[brand name]</a></li>
                                 <li><span>
                                     <img class="risk-5" src="img/risk-5.png"></span><a href="#">[brand name]</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>--%>
 
                 </div>
 

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabySafeRx", "BabySafeRx\BabySafeRx.csproj", "{CE2C53FD-AF61-43E2-AA6E-0EFE45ED5D02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabySafeRxTest", "BabySafeRxTest\BabySafeRxTest.csproj", "{6C37FE02-18B6-40F4-AC75-D86283450F63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{CE2C53FD-AF61-43E2-AA6E-0EFE45ED5D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE2C53FD-AF61-43E2-AA6E-0EFE45ED5D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE2C53FD-AF61-43E2-AA6E-0EFE45ED5D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C37FE02-18B6-40F4-AC75-D86283450F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C37FE02-18B6-40F4-AC75-D86283450F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C37FE02-18B6-40F4-AC75-D86283450F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C37FE02-18B6-40F4-AC75-D86283450F63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,156 +19,36 @@ namespace BabySafeRx
     private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
     protected void Page_Load(object sender, EventArgs e)
     {
-      if (Request["search"] != null)
+      if (!IsPostBack)
       {
-        string searchText = (string)Request["search"];
-        txtSearch.Text = searchText;
-        runSearch(searchText);
-      }
-    }
-
-    [WebMethod(EnableSession = true)]
-    public List<BabySafeRxData> CallAPI(string searchText)
-    {
-      // string returnJson = "";
-      List<BabySafeRxData> babySafeList = new List<BabySafeRxData>();
-      if (searchText.Length > 0)
-      {
-        // string openFdaDrugSite = "https://api.fda.gov/drug/event.json";
-        string openFdaLabelSite = "https://api.fda.gov/drug/label.json";
-        string openFdaApiKey = "?api_key=ovNVdm7TO3IlzJr8ABOS6Zpdad70SNsBV3NW757e";
-        string openFdaSearchDrugName = "&search=openfda.brand_name:{search}+openfda.generic_name:{search}";
-        string openFdaLimit = "&limit=50";
-        searchText = searchText.Replace(" ", "+");
-        openFdaSearchDrugName = openFdaSearchDrugName.Replace("{search}", searchText);
-        var fdaUrl = openFdaLabelSite + openFdaApiKey + openFdaLimit + openFdaSearchDrugName;
-
-        WebRequest wrGetUrl;
-        wrGetUrl = WebRequest.Create(fdaUrl);
-
-        Stream objStream = null;
-
-        try
+        if (Request["search"] != null)
         {
-          objStream = wrGetUrl.GetResponse().GetResponseStream();
+          string searchText = (string)Request["search"];
+          inputSearch1.Text = searchText;
+          runSearch(searchText);
         }
-        catch (Exception ex)
+        else
         {
-          log.Info(ex.Message);
-        }
-        if (objStream != null)
-        {
-          StreamReader objReader = new StreamReader(objStream);
-
-          string sLine = "";
-          int i = 0;
-
-          System.Text.StringBuilder result = new System.Text.StringBuilder();
-          while (sLine != null)
-          {
-            i++;
-            sLine = objReader.ReadLine();
-            if (sLine != null)
-            {
-              result.Append(sLine);
-            }
-          }
-
-          // Parse the JSON result
-          if (result.Length > 0)
-          {
-            JsonTextReader jtr = new JsonTextReader(new StringReader(result.ToString()));
-            // var js = new JsonSerializer();
-            JObject x = JObject.Parse(result.ToString());
-            // JToken rslt = x["results"];
-            IList<JToken> results = x["results"].Children().ToList();
-            foreach (JToken t in results)
-            {
-              BabySafeRxData bsrd = new BabySafeRxData();
-              bsrd.brandName = "";
-              bsrd.genericName = "";
-              bsrd.ingredients = "";
-              bsrd.laborDeliveryUse = "";
-              bsrd.nursingUse = "";
-              bsrd.pregnancyUse = "";
-              bsrd.riskLevel = "";
-              bsrd.usage = "";
-              // bsrd.alternativeDrugs = new List<AlternativeDrugs>();
-              string id = t["openfda"]["spl_id"][0].ToString();
-              bsrd.splId = id;
-              if (t["openfda"]["brand_name"] != null)
-              {
-                bsrd.brandName = t["openfda"]["brand_name"][0].ToString();
-              }
-              if (t["openfda"]["generic_name"] != null)
-              {
-                bsrd.genericName = t["openfda"]["generic_name"][0].ToString();
-              }
-              if (t["description"] != null)
-              {
-                bsrd.ingredients = t["description"][0].ToString();
-              }
-              if (t["labor_and_delivery"] != null)
-              {
-                bsrd.laborDeliveryUse = t["labor_and_delivery"][0].ToString();
-              }
-              if (t["nursing_mothers"] != null)
-              {
-                bsrd.nursingUse = t["nursing_mothers"][0].ToString();
-              }
-              if (t["pregnancy"] != null)
-              {
-                bsrd.pregnancyUse = t["pregnancy"][0].ToString();
-              }
-              bsrd.riskLevel = "Unknown";
-              if (t["teratogenic_effects"] != null)
-              {
-                string teratogenic_effects = t["teratogenic_effects"][0].ToString();
-                if (teratogenic_effects.Contains("Pregnancy Category A"))
-                {
-                  bsrd.riskLevel = "Low";
-                }
-                else if (teratogenic_effects.Contains("Pregnancy Category B"))
-                {
-                  bsrd.riskLevel = "Low*";
-                }
-                else if (teratogenic_effects.Contains("Pregnancy Category C"))
-                {
-                  bsrd.riskLevel = "Med";
-                }
-                else if (teratogenic_effects.Contains("Pregnancy Category D"))
-                {
-                  bsrd.riskLevel = "Med*";
-                }
-                else if (teratogenic_effects.Contains("Pregnancy Category X"))
-                {
-                  bsrd.riskLevel = "High*";
-                }
-              }
-              if (t["indications_and_usage"] != null)
-              {
-                bsrd.usage = t["indications_and_usage"][0].ToString();
-              }
-              babySafeList.Add(bsrd);
-            }
-
-            // returnJson = JsonConvert.SerializeObject(babySafeList);
-            HttpContext.Current.Session["babySafeData"] = babySafeList;
-          }
+          Response.Redirect("Home.aspx");
         }
       }
-      return babySafeList;
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-      runSearch(txtSearch.Text);
+      runSearch(inputSearch1.Text);
     }
 
     private void runSearch(string searchText)
     {
-      List<BabySafeRxData> babySafeList = CallAPI(searchText);
+      
+      //OpenFda openFda = new OpenFda("https://api.fda.gov/drug/label.json");  // Simple IoC example.
+      
+      // Perform the search on OpenFDA...
+      List<BabySafeRxData> babySafeList = (List<BabySafeRxData>)Session["babySafeData"];
+      // Session["babySafeData"] = babySafeList;
 
+      // Build the table rows and display the results
       TableHeaderRow thr = new TableHeaderRow();
 
       // searchTable.Rows.Clear();
@@ -178,25 +58,26 @@ namespace BabySafeRx
         TableRow tr = new TableRow();
         TableCell tc = new TableCell();
         Image im = new Image();
-        if (bsrd.riskLevel.Equals("Low"))
+        switch (bsrd.riskLevel)
         {
+          case "Low":
           im.ImageUrl = "~/img/Risk-1.png";
-        }
-        else if (bsrd.riskLevel.Equals("Low*"))
-        {
+            break;
+          case "Low*":
           im.ImageUrl = "~/img/Risk-2.png";
-        }
-        else if (bsrd.riskLevel.Equals("Med"))
-        {
+            break;
+          case "Med":
           im.ImageUrl = "~/img/Risk-3.png";
-        }
-        else if (bsrd.riskLevel.Equals("Med*"))
-        {
+            break;
+          case "Med*":
           im.ImageUrl = "~/img/Risk-4.png";
-        }
-        else if (bsrd.riskLevel.Equals("High"))
-        {
+            break;
+          case "High":
           im.ImageUrl = "~/img/Risk-5.png";
+            break;
+          default:
+          im.ImageUrl = "~/img/No-Data.png";
+            break;
         }
         tc.Controls.Add(im);
         tr.Cells.Add(tc);
@@ -227,18 +108,27 @@ namespace BabySafeRx
     protected void Button2_Click(object sender, EventArgs e)
     {
     }
-  }
 
-  public class BabySafeRxData
-  {
-    public string splId;
-    public string riskLevel;
-    public string brandName;
-    public string genericName;
-    public string usage;
-    public string ingredients;
-    public string laborDeliveryUse;
-    public string nursingUse;
-    public string pregnancyUse;
+    protected void searchButton_Click(object sender, ImageClickEventArgs e)
+    {
+      if (inputSearch1.Text.Length > 0)
+      {
+        lblError.Visible = false;
+        OpenFda openFda = new OpenFda("https://api.fda.gov/drug/label.json");  // Simple IoC example.
+
+        // Perform the search on OpenFDA...
+        List<BabySafeRxData> babySafeList = openFda.callAPI(inputSearch1.Text);
+        if (babySafeList.Count == 0)
+        {
+          lblError.Text = inputSearch1.Text + " was not found";
+          lblError.Visible = true;
+        }
+        else
+        {
+          Session["babySafeData"] = babySafeList;
+          Response.Redirect("drug-search.aspx?search=" + inputSearch1.Text);
+        }
+      }
+    }
   }
 }

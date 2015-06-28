@@ -11,13 +11,26 @@ namespace BabySafeRx
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-      int a = 0;
-      string parameter = Request["__EVENTARGUMENT"]; // parameter
-      if (parameter != null)
+    }
+
+    protected void searchButton_Click(object sender, ImageClickEventArgs e)
+    {
+      if (inputSearch.Text.Length > 0)
       {
-        if (parameter.Length > 0)
+        lblError.Visible = false;
+        OpenFda openFda = new OpenFda("https://api.fda.gov/drug/label.json");  // Simple IoC example.
+
+        // Perform the search on OpenFDA...
+        List<BabySafeRxData> babySafeList = openFda.callAPI(inputSearch.Text);
+        if (babySafeList.Count == 0)
         {
-          Response.Redirect("drug-search.aspx?search=" + parameter);
+          lblError.Text = inputSearch.Text + " was not found";
+          lblError.Visible = true;
+        }
+        else
+        {
+          Session["babySafeData"] = babySafeList;
+          Response.Redirect("drug-search.aspx?search=" + inputSearch.Text);
         }
       }
     }

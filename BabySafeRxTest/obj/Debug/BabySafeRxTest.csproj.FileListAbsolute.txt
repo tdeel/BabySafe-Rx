@@ -1,0 +1,13 @@
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\obj\Debug\BabySafeRxTest.csprojResolveAssemblyReference.cache
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\BabySafeRxTest.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\BabySafeRxTest.pdb
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\BabySafeRx.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\log4net.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\BabySafeRx.pdb
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\log4net.xml
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\obj\Debug\BabySafeRxTest.dll
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\obj\Debug\BabySafeRxTest.pdb
+C:\Users\scott_000\Documents\Projects\BabySafeRx\BabySafeRxTest\bin\Debug\OrderedTest1.orderedtest

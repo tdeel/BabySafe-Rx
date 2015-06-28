@@ -69,6 +69,7 @@
     <Content Include="css\jquery-dataTables.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\stylesheet.css" />
+    <Content Include="Default.aspx" />
     <Content Include="drug-details.aspx" />
     <Content Include="drug-search.aspx" />
     <Content Include="Home.aspx" />
@@ -77,6 +78,7 @@
     <Content Include="img\logo-open-fda.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\next.png" />
+    <Content Include="img\No-Data.png" />
     <Content Include="img\pink-checks-pattern.jpg" />
     <Content Include="img\pregnant-woman.jpg" />
     <Content Include="img\prev.png" />
@@ -120,6 +122,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BabySafeRxData.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="drug-details.aspx.cs">
       <DependentUpon>drug-details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,6 +151,8 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IOpenFda.cs" />
+    <Compile Include="OpenFda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
