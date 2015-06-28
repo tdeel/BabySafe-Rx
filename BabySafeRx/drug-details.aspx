@@ -20,14 +20,14 @@
                 <div class="large-12 columns">
                     <div class="logo-container left">
                         <a class="logo" href="Home.aspx">
-                            <img class="img-responsive" alt="BabySafe Rx" src="img/logo.png"></a>
+                            <img class="img-responsive" alt="BabySafe Rx" src="img/logo.png" /></a>
                     </div>
 
                     <div class="open-fda-container left">
                         <p>
                             <span class="powered-by">Powered by </span>
                             <a class="open-fda" href="https://open.fda.gov/" target="_blank">
-                                <img class="img-responsive" alt="Open FDA" src="img/logo-open-fda.png"></a>
+                                <img class="img-responsive" alt="Open FDA" src="img/logo-open-fda.png" /></a>
                         </p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="risk-level">
                         <h3>Risk Level</h3>
                         <div class="risk-level-number large-3 medium-3 small-2 columns">
-                            <img runat="server" id="riskImage" class="risk-level-img img-responsive" src="img/Risk-1.png">
+                            <img runat="server" id="riskImage" class="risk-level-img img-responsive" src="img/Risk-1.png" />
                         </div>
                         <div class="risk-level-text large-9 medium-9 small-10 columns">
                             <p runat="server" id="riskText"></p>
@@ -65,8 +65,10 @@
                     </div>
 
                     <div class="drug-info-box">
-                        <h3>Use During Pregnancy</h3>
-                        <p runat="server" id="pregnancyUse"></p>
+                        <article data-readmore="" aria-expanded="false" id="Article2">
+                            <h3>Use During Pregnancy</h3>
+                            <p runat="server" id="pregnancyUse"></p>
+                        </article>
                     </div>
 
                     <div class="drug-info-box">
@@ -98,7 +100,7 @@
 
                     </div>
 
-<%--                    <div class="details-right-rcolumn large-6 medium-12 small-12 columns">
+                    <%--                    <div class="details-right-rcolumn large-6 medium-12 small-12 columns">
                         <div class="alternatives drug-info-box">
                             <h3>Alternatives</h3>
                             <p>* no human studies</p>
@@ -114,7 +116,6 @@
                             </ul>
                         </div>
                     </div>--%>
-
                 </div>
 
             </div>
@@ -127,7 +128,7 @@
                 </div>
                 <div class="large-3 medium-3 small-3 columns">
                     <a class="fda right" href="http://www.fda.gov/" target="_blank">
-                        <img class="img-responsive" alt="FDA" src="img/logo-fda.png"></a>
+                        <img class="img-responsive" alt="FDA" src="img/logo-fda.png" /></a>
                 </div>
             </div>
         </footer>
