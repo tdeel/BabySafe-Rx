@@ -23,7 +23,10 @@
         $(document).ready(function () {
             $('#searchTable').DataTable({
                 "searching": false,
-                "lengthMenu": [[5, 10, -1], [5, 10, "All"]]
+                "lengthMenu": [[5, 10, -1], [5, 10, "All"]],
+                "columnDefs": [
+                    { "orderable": false, "targets": 0 }
+                    ]
             });
         });
 
@@ -65,32 +68,32 @@
                 <div class="heading large-12 medium-12 small-12 columns">
                     <h1>Prescription Drugs
                     </h1>
-                        <div class="search-bar row collapse">
-                            <div class="search-bar-input-div large-11 medium-11 small-10 columns">
-                                <asp:TextBox runat="server" ID="inputSearch1" placeholder="Can I take this drug while pregnant?" CssClass="search-bar-input"></asp:TextBox>
-                            </div>
-                            <div class="search-icon-div large-1 medium-1 small-2 end columns">
-                                <span class="search-icon postfix">
-                                    <asp:ImageButton runat="server" ID="searchButton" CssClass="fi-magnifying-glass" ClientIDMode="Static" 
-                                        ImageUrl="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-magnifying-glass.svg" 
-                                        Width="22" Height="22"
-                                        OnClick="searchButton_Click" />
-                                </span>
-                            </div>
+                    <div class="search-bar row collapse">
+                        <div class="search-bar-input-div large-11 medium-11 small-10 columns">
+                            <asp:TextBox runat="server" ID="inputSearch1" placeholder="Can I take this drug while pregnant?" CssClass="search-bar-input"></asp:TextBox>
                         </div>
-                        <asp:Label runat="server" ID="lblError" ForeColor="Red" Visible="false" Text=""></asp:Label>
+                        <div class="search-icon-div large-1 medium-1 small-2 end columns">
+                            <span class="search-icon postfix">
+                                <asp:ImageButton runat="server" ID="searchButton" CssClass="fi-magnifying-glass" ClientIDMode="Static"
+                                    ImageUrl="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-magnifying-glass.svg"
+                                    Width="22" Height="22"
+                                    OnClick="searchButton_Click" />
+                            </span>
+                        </div>
+                    </div>
+                    <asp:Label runat="server" ID="lblError" ForeColor="Red" Visible="false" Text=""></asp:Label>
                     <div class="risk-disclaimer">
                         <p>* no human studies </p>
                     </div>
 
-                    <asp:Table ID="searchTable" runat="server" CssClass="results-section" ClientIDMode="Static">
+                    <asp:Table ID="searchTable" runat="server" CssClass="results-section linkUnderline" ClientIDMode="Static">
                         <asp:TableHeaderRow TableSection="TableHeader">
                             <asp:TableHeaderCell><u>Risk Level</u></asp:TableHeaderCell>
                             <asp:TableHeaderCell><u>Drug Name</u></asp:TableHeaderCell>
                             <asp:TableHeaderCell>Generic Name</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Usage</asp:TableHeaderCell>
                         </asp:TableHeaderRow>
-<%--                        <asp:TableRow TableSection="TableBody">
+                        <%--                        <asp:TableRow TableSection="TableBody">
                             <asp:TableCell></asp:TableCell>
                             <asp:TableCell></asp:TableCell>
                             <asp:TableCell></asp:TableCell>

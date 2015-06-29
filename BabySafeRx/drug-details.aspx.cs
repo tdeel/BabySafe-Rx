@@ -54,7 +54,7 @@ namespace BabySafeRx
                   noHumanStudiesText.InnerText = "";
                   break;
                 default:
-                  riskImage.Src = "";
+                  riskImage.Src = "img/No-Data.png";
                   break;
               }
               pregnancyUse.InnerText = bsd.pregnancyUse;

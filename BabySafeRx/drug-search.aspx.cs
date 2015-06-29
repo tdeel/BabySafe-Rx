@@ -86,6 +86,7 @@ namespace BabySafeRx
         tc.Controls.Add(im);
         tr.Cells.Add(tc);
         HyperLink l = new HyperLink();
+        l.CssClass = "linkUnderline";
         l.NavigateUrl = "drug-details.aspx?splId=" + bsrd.splId;
         l.Text = bsrd.brandName;
         tc = new TableCell();
