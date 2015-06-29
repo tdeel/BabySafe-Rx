@@ -76,6 +76,8 @@
                             <span class="search-icon postfix">
                                 <asp:ImageButton runat="server" ID="searchButton" CssClass="fi-magnifying-glass" ClientIDMode="Static"
                                     ImageUrl="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-magnifying-glass.svg"
+                                    BorderStyle="None"
+                                    
                                     Width="22" Height="22"
                                     OnClick="searchButton_Click" />
                             </span>
@@ -93,12 +95,6 @@
                             <asp:TableHeaderCell>Generic Name</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Usage</asp:TableHeaderCell>
                         </asp:TableHeaderRow>
-                        <%--                        <asp:TableRow TableSection="TableBody">
-                            <asp:TableCell></asp:TableCell>
-                            <asp:TableCell></asp:TableCell>
-                            <asp:TableCell></asp:TableCell>
-                            <asp:TableCell></asp:TableCell>
-                        </asp:TableRow>--%>
                     </asp:Table>
                 </div>
             </div>

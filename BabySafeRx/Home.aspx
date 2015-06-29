@@ -30,14 +30,14 @@
                 <div class="large-12 columns">
                     <div class="logo-container left">
                         <a class="logo" href="Home.aspx">
-                            <img class="img-responsive" alt="BabySafe Rx" src="img/logo.png"></a>
+                            <img class="img-responsive" alt="BabySafe Rx" src="img/logo.png" /></a>
                     </div>
 
                     <div class="open-fda-container left">
                         <p>
                             <span class="powered-by">Powered by </span>
                             <a class="open-fda" href="https://open.fda.gov/" target="_blank">
-                                <img class="img-responsive" alt="Open FDA" src="img/logo-open-fda.png"></a>
+                                <img class="img-responsive" alt="Open FDA" src="img/logo-open-fda.png" /></a>
                         </p>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
         <section class="content">
             <div class="content-row">
                 <div class="pregnant-woman large-3 medium-4 small-4 columns">
-                    <img class="pregnant-woman-img img-responsive" alt="pregnant woman" src="img/pregnant-woman.jpg">
+                    <img class="pregnant-woman-img img-responsive" alt="pregnant woman" src="img/pregnant-woman.jpg" />
                 </div>
 
                 <div class="intro-text large-9 medium-8 small-8 columns">
@@ -67,6 +67,7 @@
                                 <span class="search-icon postfix">
                                     <asp:ImageButton runat="server" ID="searchButton" CssClass="fi-magnifying-glass" ClientIDMode="Static" 
                                         ImageUrl="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-magnifying-glass.svg" 
+                                        BorderStyle="None"
                                         Width="22" Height="22"
                                         OnClick="searchButton_Click" />
                                 </span>
@@ -111,7 +112,7 @@
                 </div>
                 <div class="large-3 medium-3 small-3 columns">
                     <a class="fda right" href="http://www.fda.gov/" target="_blank">
-                        <img class="img-responsive" alt="FDA" src="img/logo-fda.png"></a>
+                        <img class="img-responsive" alt="FDA" src="img/logo-fda.png" /></a>
                 </div>
             </div>
         </footer>

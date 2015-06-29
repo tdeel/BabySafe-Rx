@@ -65,15 +65,17 @@
                     </div>
 
                     <div class="drug-info-box">
-                        <article data-readmore="" aria-expanded="false" id="Article2">
+                        <article data-readmore="" aria-expanded="false" id="rmjs-3">
                             <h3>Use During Pregnancy</h3>
                             <p runat="server" id="pregnancyUse"></p>
                         </article>
                     </div>
 
                     <div class="drug-info-box">
-                        <h3>Use During Labor and Delivery</h3>
-                        <p runat="server" id="laborDelivery"></p>
+                        <article data-readmore="" aria-expanded="false" id="rmjs-2">
+                            <h3>Use During Labor and Delivery</h3>
+                            <p runat="server" id="laborDelivery"></p>
+                        </article>
                     </div>
 
                     <div class="drug-info-box">
@@ -92,30 +94,13 @@
                                 <p runat="server" id="usageText"></p>
                             </article>
                         </div>
-
                         <div class="drug-info-box">
-                            <h3>Ingredients</h3>
-                            <p runat="server" id="ingredientsText"></p>
+                            <article data-readmore="" aria-expanded="false" id="rmjs-4">
+                                <h3>Ingredients</h3>
+                                <p runat="server" id="ingredientsText"></p>
+                            </article>
                         </div>
-
                     </div>
-
-                    <%--                    <div class="details-right-rcolumn large-6 medium-12 small-12 columns">
-                        <div class="alternatives drug-info-box">
-                            <h3>Alternatives</h3>
-                            <p>* no human studies</p>
-                            <ul>
-                                <li><span>
-                                    <img class="risk-3" src="img/risk-3.png" /></span><a href="#">[brand name]</a></li>
-                                <li><span>
-                                    <img class="risk-2" src="img/risk-2.png" /></span><a href="#">[brand name]</a></li>
-                                <li><span>
-                                    <img class="risk-1" src="img/risk-1.png"></span><a href="#">[brand name]</a></li>
-                                <li><span>
-                                    <img class="risk-5" src="img/risk-5.png"></span><a href="#">[brand name]</a></li>
-                            </ul>
-                        </div>
-                    </div>--%>
                 </div>
 
             </div>
@@ -140,6 +125,9 @@
         <script>
             $(document).foundation();
             $('#rmjs-1').readmore();
+            $('#rmjs-2').readmore();
+            $('#rmjs-3').readmore();
+            $('#rmjs-4').readmore();
         </script>
     </form>
 </body>
