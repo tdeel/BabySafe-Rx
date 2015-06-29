@@ -79,7 +79,7 @@
                             <li><a href="javascript:void(0)" onclick="searchLink('Nasonex')">Nasonex (mometasone f...</a></li>
                             <li><a href="javascript:void(0)" onclick="searchLink('Lunesta')">Lunesta (eszopiclone)</a></li>
                             <li><a href="javascript:void(0)" onclick="searchLink('Claravis')">Claravis (isotretinoi...</a></li>
-                            <li><a href="javascript:void(0)" onclick="searchLink('Amoxil')">Amoxil (amoxicillin)</a></li>
+                            <li><a href="javascript:void(0)" onclick="searchLink('Amoxicillin')">Amoxil (amoxicillin)</a></li>
                             <li><a href="javascript:void(0)" onclick="searchLink('Zofran')">Zofran (ondansetron)</a></li>
                         </ul>
                     </div>

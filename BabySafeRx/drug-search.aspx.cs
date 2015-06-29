@@ -41,7 +41,11 @@ namespace BabySafeRx
 
     private void runSearch(string searchText)
     {
-      
+
+      if (Session["babySafeData"] == null)
+      {
+        Response.Redirect("Home.asp"); // Session Timeout
+      }
       //OpenFda openFda = new OpenFda("https://api.fda.gov/drug/label.json");  // Simple IoC example.
       
       // Perform the search on OpenFDA...

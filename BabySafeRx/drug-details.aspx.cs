@@ -31,22 +31,27 @@ namespace BabySafeRx
                 case "Low":
                   riskImage.Src = "img/Risk-1.png";
                   riskText.InnerText = "Human studies show low risk for fetal harm.";
+                  noHumanStudiesText.InnerText = "";
                   break;
                 case "Low*":
                   riskImage.Src = "img/Risk-2.png";
                   riskText.InnerText = "Human studies show low* risk for fetal harm.";
+                  noHumanStudiesText.InnerText = "* no human studies";
                   break;
                 case "Med":
                   riskImage.Src = "img/Risk-3.png";
                   riskText.InnerText = "Human studies show medium risk for fetal harm. Consult a doctor for guidance before taking this drug while pregnant.";
+                  noHumanStudiesText.InnerText = "";
                   break;
                 case "Med*":
                   riskImage.Src = "img/Risk-4.png";
                   riskText.InnerText = "Human studies show medium* risk for fetal harm. Consult a doctor for guidance before taking this drug while pregnant.";
+                  noHumanStudiesText.InnerText = "* no human studies";
                   break;
                 case "High":
                   riskImage.Src = "img/Risk-5.png";
                   riskText.InnerText = "Human studies show high risk for fetal harm. Consult a doctor for guidance before taking this drug while pregnant.";
+                  noHumanStudiesText.InnerText = "";
                   break;
                 default:
                   riskImage.Src = "";
@@ -60,6 +65,10 @@ namespace BabySafeRx
             }
           }
         }
+      }
+      else
+      {
+        Response.Redirect("Home.aspx");
       }
     }
   }

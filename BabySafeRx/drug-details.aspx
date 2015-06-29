@@ -60,7 +60,7 @@
                         </div>
                         <div class="risk-level-text large-9 medium-9 small-10 columns">
                             <p runat="server" id="riskText"></p>
-                            <p>* no human studies</p>
+                            <p runat="server" id="noHumanStudiesText"></p>
                         </div>
                     </div>
 

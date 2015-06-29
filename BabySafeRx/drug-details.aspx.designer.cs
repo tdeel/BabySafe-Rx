@@ -58,6 +58,15 @@ namespace BabySafeRx {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl riskText;
         
         /// <summary>
+        /// noHumanStudiesText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl noHumanStudiesText;
+        
+        /// <summary>
         /// pregnancyUse control.
         /// </summary>
         /// <remarks>
