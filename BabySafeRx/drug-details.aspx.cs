@@ -55,6 +55,7 @@ namespace BabySafeRx
                   break;
                 default:
                   riskImage.Src = "img/No-Data.png";
+                  noHumanStudiesText.InnerText = "The risk level of this drug is unknown."
                   break;
               }
               pregnancyUse.InnerText = bsd.pregnancyUse;
