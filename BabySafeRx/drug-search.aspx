@@ -13,12 +13,14 @@
     <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
     <!-- DataTables CSS -->
     <link rel="stylesheet" type="text/css" href="css/jquery-dataTables.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" />
     <script src="js/vendor/modernizr.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <!-- jQuery -->
     <!-- DataTables -->
     <script src="js/jquery-dataTables.js"></script>
+    <script src="http://cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
     <script>
         $(document).ready(function () {
             $('#searchTable').DataTable({
@@ -28,6 +30,10 @@
                     { "orderable": false, "targets": 0 }
                     ]
             });
+        });
+        $(document).ready(function () {
+
+
         });
 
         function retrieveResults() {
@@ -88,7 +94,7 @@
                         <p>* no human studies </p>
                     </div>
 
-                    <asp:Table ID="searchTable" runat="server" CssClass="results-section linkUnderline" ClientIDMode="Static">
+                    <asp:Table ID="searchTable" runat="server" CssClass="results-section linkUnderline responsive" ClientIDMode="Static">
                         <asp:TableHeaderRow TableSection="TableHeader">
                             <asp:TableHeaderCell><u>Risk Level</u></asp:TableHeaderCell>
                             <asp:TableHeaderCell><u>Drug Name</u></asp:TableHeaderCell>

@@ -493,7 +493,7 @@ table
         {
             margin-bottom: 10px;
             display: block;
-            overflow: hidden;
+            /*overflow: hidden;*/
         }
 
         table td

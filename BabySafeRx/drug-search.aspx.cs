@@ -95,6 +95,7 @@ namespace BabySafeRx
         tr.Cells.Add(tc);
         tc = new TableCell();
         tc.Text = bsrd.genericName;
+        tc.Style.Add("padding-left", "10px");
         tr.Cells.Add(tc);
         tc = new TableCell();
         if (bsrd.usage.Length > 230)
