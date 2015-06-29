@@ -86,7 +86,6 @@
                 </div>
 
                 <div class="details-right large-8 medium-6 small-12 columns">
-
                     <div class="details-right-lcolumn large-6 medium-12 small-12 columns">
                         <div class="drug-info-box">
                             <article data-readmore="" aria-expanded="false" id="rmjs-1">

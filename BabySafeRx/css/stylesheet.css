@@ -282,6 +282,24 @@ span.search-icon.postfix
     width: auto;
 }
 
+.drug-info-box #rmjs-2 + [data-readmore-toggle], .drug-info-box #rmjs-2[data-readmore]
+{
+    display: block;
+    float: right;
+    width: auto;
+}
+.drug-info-box #rmjs-3 + [data-readmore-toggle], .drug-info-box #rmjs-3[data-readmore]
+{
+    display: block;
+    float: right;
+    width: auto;
+}
+.drug-info-box #rmjs-4 + [data-readmore-toggle], .drug-info-box #rmjs-4[data-readmore]
+{
+    display: block;
+    float: right;
+    width: auto;
+}
 .details-left p, .details-right p
 {
     font-size: .8em;
