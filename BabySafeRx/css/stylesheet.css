@@ -70,6 +70,11 @@ body
     height: auto;
 }
 
+.no-outline
+{
+    outline:none;
+}
+
 .breadcrumbs
 {
     margin-bottom: 0;
@@ -395,6 +400,7 @@ table
     position: relative;
     top: 1px;
 }
+
 
 /* MEDIA QUERIES */
 
