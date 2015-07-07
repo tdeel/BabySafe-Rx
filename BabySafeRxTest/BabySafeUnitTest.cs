@@ -11,6 +11,7 @@ namespace BabySafeRxTest
     [TestMethod]
     public void SearchAPI()
     {
+      // Execute a test search and ensure results are returned.
       BabySafeRx.OpenFda openFda = new BabySafeRx.OpenFda("https://api.fda.gov/drug/label.json");  // Simple IoC example.
 
       string searchString = "Topamax";

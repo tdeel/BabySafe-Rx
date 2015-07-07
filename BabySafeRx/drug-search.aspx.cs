@@ -25,7 +25,7 @@ namespace BabySafeRx
         {
           string searchText = (string)Request["search"];
           inputSearch1.Text = searchText;
-          runSearch(searchText);
+          displayResults(searchText);
         }
         else
         {
@@ -36,26 +36,23 @@ namespace BabySafeRx
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-      runSearch(inputSearch1.Text);
+      displayResults(inputSearch1.Text);
     }
 
-    private void runSearch(string searchText)
+    private void displayResults(string searchText)
     {
 
       if (Session["babySafeData"] == null)
       {
         Response.Redirect("Home.asp"); // Session Timeout
       }
-      //OpenFda openFda = new OpenFda("https://api.fda.gov/drug/label.json");  // Simple IoC example.
       
       // Perform the search on OpenFDA...
       List<BabySafeRxData> babySafeList = (List<BabySafeRxData>)Session["babySafeData"];
-      // Session["babySafeData"] = babySafeList;
 
       // Build the table rows and display the results
       TableHeaderRow thr = new TableHeaderRow();
 
-      // searchTable.Rows.Clear();
       foreach (BabySafeRxData bsrd in babySafeList)
       {
         
@@ -110,9 +107,6 @@ namespace BabySafeRx
         searchTable.Rows.Add(tr);
         
       }
-    }
-    protected void Button2_Click(object sender, EventArgs e)
-    {
     }
 
     protected void searchButton_Click(object sender, ImageClickEventArgs e)

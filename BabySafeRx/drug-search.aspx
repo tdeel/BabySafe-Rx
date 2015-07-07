@@ -31,10 +31,6 @@
                     ]
             });
         });
-        $(document).ready(function () {
-
-
-        });
 
         function retrieveResults() {
             searchText = new String("");
